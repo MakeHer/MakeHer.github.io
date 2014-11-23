@@ -180,6 +180,9 @@
     a:hover{
       color: #000;
     }
+    a:visited{
+      color: darken($theme-color4,25%);
+    }
 }
 
 .footer-col {
@@ -319,6 +322,12 @@ article.page-content{
     margin-left: 50%;
     transform: translate(-50%,0);
     text-indent: -9000px;
+}
+#author1{
+    background: $theme-color1;
+}
+#author2{
+    background: $theme-color4;
 }
 
 .post-side-about{
