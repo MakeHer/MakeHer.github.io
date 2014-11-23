@@ -1,6 +1,6 @@
 ---
-layout: post
-title:  "Welcome to Jekyll!"
+layout: project
+title:  "My First Project!"
 date:   2014-11-07 01:22:14
 categories: jekyll update
 ---

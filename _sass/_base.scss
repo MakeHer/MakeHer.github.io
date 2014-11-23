@@ -32,7 +32,8 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
+    margin-top: 8px;
+    margin-bottom: 2px;
 }
 
 
@@ -81,25 +82,35 @@ li {
  */
 h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
+    color: $theme-color3;
+    font-family: "Letter GothicPS";
+    font-weight: bold;
+    padding: 8px 0px 2px;
+    line-height: 1.5;
+
 }
 
+h2{
+    font-size: small;
+}
 
 
 /**
  * Links
  */
 a {
-    color: $brand-color;
+    color: $theme-color3;
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: lighten($theme-color3, 15%);
     }
 
     &:hover {
-        color: $text-color;
+        color: darken($theme-color3, 10%);
         text-decoration: underline;
     }
+
 }
 
 
@@ -154,14 +165,15 @@ pre {
  * Wrapper
  */
 .wrapper {
-    max-width: -webkit-calc(800px - (#{$spacing-unit} * 2));
-    max-width:         calc(800px - (#{$spacing-unit} * 2));
+    position: relative;
+    //border: 1px solid red;	
+    max-width: -webkit-calc(1000px - (#{$spacing-unit} * 2));
+    max-width:         calc(1000px - (#{$spacing-unit} * 2));
     margin-right: auto;
     margin-left: auto;
     padding-right: $spacing-unit;
     padding-left: $spacing-unit;
     @extend %clearfix;
-
     @include media-query($on-laptop) {
         max-width: -webkit-calc(800px - (#{$spacing-unit}));
         max-width:         calc(800px - (#{$spacing-unit}));

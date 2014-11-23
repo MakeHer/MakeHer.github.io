@@ -8,38 +8,19 @@ layout: default
   <div class="post-side-about">
     <h3>About Me</h3>
     <p>
-      An Electronics Postgraduate from Sydney. Looking for ways to outreach to the younger. Interests in electronics, DIY, programming. 
+      An Electronics 
     </p>
   </div>
-  <div class="post-side-tags">
-    <ul>
-      {% for tag in site.tags %}
-      <li><a href="/tags/{{ tag[0] }}">{{ tag[0] }}</a></li>
-      {% endfor %}
-    </ul>
+  <div class="post-side-categories">
   </div>
-  <div class="post-side-archive">
-    {% for post in site.posts %}
-    {% capture month %}{{ post.date | date: '%m%Y' }}{% endcapture %}
-    {% capture nmonth %}{{ post.next.date | date: '%m%Y' }}{% endcapture %}
-        {% if month != nmonth %}
-            {% if forloop.index != 1 %}</ul>{% endif %}
-            <h3>{{ post.date | date: '%B %Y' }}</h3><ul>
-        {% endif %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-    <time>{{ post.date | date: "%e %B %Y" }}</time>
-{% endfor %}
-
+  <div class="post-side-archive">   
   </div>
 </div>
 <div class="post">
 
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%-d %b %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}
-      <br>
-      <i class="fa fa-tags"></i> {% for tag in page.tags %} <a href="/tags/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;"><u>{{ tag }}</u></a>  {% if forloop.last != true %} {% endif %} {% endfor %} 
-    </p>
+    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
   </header>
 
   <article class="post-content">

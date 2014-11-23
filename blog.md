@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Learn
-permalink: /lessons/
+title: Blog
+permalink: /posts/
 menu: main
-weight: 2
+weight: 5
 ---
 
 Check back, or subscribe to my RSS feed, to see when more lessons are added.
@@ -15,14 +15,17 @@ If you are interested in learning more tertiary level subjects, I recommend chec
 [CourseraLink]:
 [edXlink]:
 
+
   <ul class="post-list">
-    {% for lesson in site.lessons %}
+    {% for post in site.posts %}
       <li>
-        <span class="post-meta">{{ lesson.date | date: "%b %-d, %Y" }}</span>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
         <h2>
-          <a class="post-link" href="{{ lesson.url | prepend: site.baseurl }}">{{ lesson.title }}</a>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
       </li>
     {% endfor %}
   </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>

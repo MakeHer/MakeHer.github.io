@@ -14,3 +14,9 @@ faviconurl: "/images/favicon2.ico"
 
 # Build settings
 markdown: kramdown
+
+collections:
+ projects:
+  output: true
+ lessons:
+  output: true
