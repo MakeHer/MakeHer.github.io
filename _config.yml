@@ -11,6 +11,8 @@ url: "http://makeher.github.io" # the base hostname & protocol for your site
 twitter_username: Double_LA
 github_username:  makeher
 faviconurl: "/images/favicon2.ico"
+paginate: 10 # number of items max on paginator.
+paginate_path: "/posts/page:num/"
 
 # Build settings
 markdown: kramdown
