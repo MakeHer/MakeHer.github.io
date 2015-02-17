@@ -6,37 +6,42 @@ lesson-cat: "Website HowTos"
 description: "How did I make my website? I'll show you!"
 ---
 
-First and foremost, I's like to acknowlege all the sources that I brought together to fit all the features of the website together.  
-After reading this I hope you'll have found some of it useful. If there's something you're not sure clear on, leave comments, and I'll try my best to edit and add what's needed. Also if in doubt, GOOGLE! -- just like I did. 
+Before going into detail, this is a how to guide of basically how I setup this blog, listing some of the resources and guides which I used. Hopefully by reading this guide, you'll have been convinced that using Jekyll + GitHub pages is one of the most convenient ways to get a static blog up and running, with faster load times (since there's no access to databases), and full control of the source that gets generated.
 
-Of course I've tried to make this as modular as possible so you can chop and cut any features you like. But lets start with the basics.
+If there's something you're not sure clear on, leave comments, and I'll try my best to edit and add what's needed. Also there's no doubt you'll be able to find more in depth explanations by searching. 
 
-*Side Note*
-------------------
-
-Now before you start reading, I will caution that, yes, most of the setup will use the command-line. So if you're thinking the command-line is quite a daunting task, I do implore you to have a go first. I'll admite I used to have a fear for the command-line (despite the fact that as a child I used to think it was such a cool hackery thing to do), but over time I exercised more with it, and just like a muscle, it's become almost a breeze to navigate through folder structures. It's like Linus Torvald said: "The Command-Line may be hard to do easy tasks, but it make it easy to do hard tasks".
+Of course I've tried to make this as modular as possible so you can chop and cut any features you like. But let's start with the basics.
 
 Setting up the Site
 ===================
 
-You'll need to do a few things before you get started on the website:
+You'll need to do a few things before you get started on editing layout and content:
 
  * Sign up for a github account
+ * Install git on your local machine
+ * create a new repository on your github remote
  * Install Ruby
  * Install Bundler gem
- * Install git
- * create a new repository on your github remote
- * _(optional)_: Link it with a domain name
+ * Install jekyll with the 'github-pages' gem
 
-Install Jekyll
+ These steps can be done by following the:
+
+ * [GitHub Pages](http://pages.github.com "GitHub Pages") quick setup guide, and
+ * It's later [Jekyll](https://help.github.com/articles/using-jekyll-with-pages/ "Using Jekyll with Pages") install guide
+
+Configuring Jekyll
 ==============
+So now that you have Jekyll installed on your local machine, you can now see how your repo will build after a push to your GiHub repo by typing in your command-line window/terminal:
 
+```
+~$ bundle exec jekyll serve
+```
 
 Ok, I've followed your steps. So what am I staring at?
 ------------------------------------------------------
-Jekyll is a static site generator (as opposed to a dynamic). Difference between a static site is that all the pages that a user would access off the server are all compiled, and the server only neets to fetch the page that the browser requests. Whereas a dynamic site would have to build the page everytime the browser requests it, taking more processing time. Reason why you might want a dynamic page is if the information your site provides changes quite frequently, say for example, the page a user requests reports the number of transactions have been made over the past 24 hours, which will in turn require to access a database to get the live figures. Examples of dynamic site generators are like wordpress and joomla, which are also known as Content Management Systems (CMS).
+Jekyll is a static site generator (as opposed to a dynamic). Think of it like going to a takeaway shop, and ordering an item off the menu which is premade instead of made-to-order. The difference between a static site is that all the pages that a user would access off the server are all compiled, and the server only neets to fetch the page that the browser requests. Whereas a dynamic site would have to build the page everytime the browser requests it, taking more processing time. Reason why you might want a dynamic page is if the information your site provides changes quite frequently, say for example, the page a user requests reports the number of transactions have been made over the past 24 hours, which will in turn require to access a database to get the live figures. Examples of dynamic site generators are like wordpress and joomla, which are also known as Content Management Systems (CMS).
 
-For the purpose of blogging and publishing, a static site is quite appropriate, since blogging new updates is a relatively less frequent way of publishing, and generally the site accumulates with new content, rather than refreshing with completely different content everytime. Therefore it's faster for users to access the content if its premade. Just like if you go to a takeaway shop and you order something which is premade as opposed to made-to-order. 
+For the purpose of blogging and publishing, a static site is quite appropriate, since blogging new updates is a relatively less frequent way of publishing, and generally the site accumulates with new content, rather than refreshing with completely different content everytime.
 
 So having a look at the folder structure, you'll notice a couple of things. 
 
